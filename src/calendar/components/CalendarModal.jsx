@@ -74,7 +74,7 @@ function CalendarModal() {
 			return;
 		}
 		if (formValues.title.length <= 0) {
-			Swal.fire('Title must contain text', 'Enter a title', 'error');
+			Swal.fire('Enter a title', 'The title field is required', 'error');
 			return;
 		}
 		await startSavingEvent(formValues);

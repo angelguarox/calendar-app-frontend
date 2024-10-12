@@ -18,7 +18,7 @@ function useAuthStore() {
 			const { data } = await calendarApi.post('/auth', { email, password });
 			localStorage.setItem('token', data.token);
 			localStorage.setItem('token-init-date', new Date().getTime());
-			dispatch(onLogin({ id: data.data.id, name: data.data.name }));
+			dispatch(onLogin({ _id: data.data.id, name: data.data.name }));
 		} catch (error) {
 			dispatch(onLogout(error.response.data.msg));
 			setTimeout(() => {
@@ -36,7 +36,7 @@ function useAuthStore() {
 			});
 			localStorage.setItem('token', data.token);
 			localStorage.setItem('token-init-date', new Date().getTime());
-			dispatch(onLogin({ id: data.data.id, name: data.data.name }));
+			dispatch(onLogin({ _id: data.data.id, name: data.data.name }));
 		} catch (error) {
 			dispatch(onLogout(error.response.data?.msg || 'User alredy exist'));
 			setTimeout(() => {
@@ -52,12 +52,10 @@ function useAuthStore() {
 
 		try {
 			const { data } = await calendarApi.get('/auth/renew');
-			console.log({ data });
 			localStorage.setItem('token', data.token);
 			localStorage.setItem('token-init-date', new Date().getTime());
-			dispatch(onLogin({ id: data.data.id, name: data.data.name }));
+			dispatch(onLogin({ _id: data.data.id, name: data.data.name }));
 		} catch (error) {
-			console.error(error);
 			localStorage.clear();
 			dispatch(onLogout());
 		}

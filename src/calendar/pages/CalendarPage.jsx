@@ -53,7 +53,7 @@ function CalendarPage() {
 				startAccessor='start'
 				endAccessor='end'
 				style={{ height: 'calc(100vh - 80px)' }}
-				messages={getMessagesES()}
+				// messages={getMessagesES()}
 				eventPropGetter={eventStyleGetter}
 				components={{
 					event: CalendarEvent,

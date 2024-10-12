@@ -91,12 +91,12 @@ function CalendarModal() {
 			overlayClassName='modal-fondo'
 			closeTimeoutMS={200}
 		>
-			<h1> Nuevo evento </h1>
+			<h1>New event</h1>
 			<hr />
 			<form className='container' onSubmit={onSubmit}>
 				<div className='form-row d-flex align-item-center justify-content-center'>
 					<div className='form-group mr-2 mb-0'>
-						<label>Fecha y hora inicio</label>
+						<label>Start date and time</label>
 						<div className='form-group'>
 							<DatePicker
 								className='form-control'
@@ -111,7 +111,7 @@ function CalendarModal() {
 					</div>
 
 					<div className='form-group ml-2 mb-0'>
-						<label>Fecha y hora fin</label>
+						<label>End date and time</label>
 						<div className='form-group'>
 							<DatePicker
 								className='form-control'
@@ -130,18 +130,18 @@ function CalendarModal() {
 				<hr className='mt-0' />
 
 				<div className='form-group mb-2'>
-					<label>Titulo y notas</label>
+					<label>Title and notes</label>
 					<input
 						type='text'
 						className={`form-control ${tittleClass}`}
-						placeholder='Título del evento'
+						placeholder='Title of the event'
 						name='title'
 						autoComplete='off'
 						value={formValues.title}
 						onChange={onInputChanged}
 					/>
 					<small id='emailHelp' className='form-text text-muted'>
-						Una descripción corta
+						A short description
 					</small>
 				</div>
 
@@ -149,20 +149,20 @@ function CalendarModal() {
 					<textarea
 						type='text'
 						className='form-control'
-						placeholder='Notas'
+						placeholder='Notes'
 						rows='5'
 						name='notes'
 						value={formValues.notes}
 						onChange={onInputChanged}
 					></textarea>
 					<small id='emailHelp' className='form-text text-muted'>
-						Información adicional
+						Additional information
 					</small>
 				</div>
 
 				<button type='submit' className='btn btn-outline-primary btn-block'>
 					<i className='far fa-save'></i>
-					<span> Guardar</span>
+					<span> Save</span>
 				</button>
 			</form>
 		</Modal>

@@ -9,7 +9,7 @@ function Navbar() {
 			<button className='btn btn-outline-danger'>
 				<i className='fas fa-sign-out-alt'></i>
 				&nbsp;
-				<span>Salir</span>
+				<span>Log out</span>
 			</button>
 		</div>
 	);

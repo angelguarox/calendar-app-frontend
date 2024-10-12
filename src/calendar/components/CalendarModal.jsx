@@ -70,11 +70,11 @@ function CalendarModal() {
 		const diff = differenceInSeconds(formValues.end, formValues.start);
 
 		if (isNaN(diff) || diff <= 0) {
-			Swal.fire('Fechas incorrectas', 'Revisar las fechas ingresadas', 'error');
+			Swal.fire('Incorrect dates', 'Review the dates entered', 'error');
 			return;
 		}
 		if (formValues.title.length <= 0) {
-			Swal.fire('Titulo debe contener texto', 'Ingrese un titulo', 'error');
+			Swal.fire('Title must contain text', 'Enter a title', 'error');
 			return;
 		}
 		await startSavingEvent(formValues);
